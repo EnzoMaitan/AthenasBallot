@@ -44,7 +44,6 @@
             this.btnImportCSV = new System.Windows.Forms.Button();
             this.lstVoters = new System.Windows.Forms.ListBox();
             this.lblGuide = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtName
@@ -98,12 +97,13 @@
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.LightGreen;
+            this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Location = new System.Drawing.Point(274, 158);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(92, 23);
+            this.btnRegister.Size = new System.Drawing.Size(83, 23);
             this.btnRegister.TabIndex = 6;
-            this.btnRegister.Text = "Register Voter";
+            this.btnRegister.Text = "Register ";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -164,6 +164,7 @@
             // btnImportCSV
             // 
             this.btnImportCSV.BackColor = System.Drawing.Color.LightGreen;
+            this.btnImportCSV.FlatAppearance.BorderSize = 0;
             this.btnImportCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportCSV.Location = new System.Drawing.Point(424, 351);
             this.btnImportCSV.Name = "btnImportCSV";
@@ -171,6 +172,7 @@
             this.btnImportCSV.TabIndex = 13;
             this.btnImportCSV.Text = "Import File";
             this.btnImportCSV.UseVisualStyleBackColor = false;
+            this.btnImportCSV.Click += new System.EventHandler(this.btnImportCSV_Click);
             // 
             // lstVoters
             // 
@@ -189,24 +191,12 @@
             this.lblGuide.TabIndex = 15;
             this.lblGuide.Text = "?";
             // 
-            // btnCancel
-            // 
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(12, 370);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 16;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // fmrManageVoter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCancel);
+            this.ClientSize = new System.Drawing.Size(650, 436);
             this.Controls.Add(this.lblGuide);
             this.Controls.Add(this.lstVoters);
             this.Controls.Add(this.btnImportCSV);
@@ -248,6 +238,5 @@
         private System.Windows.Forms.Button btnImportCSV;
         private System.Windows.Forms.ListBox lstVoters;
         private System.Windows.Forms.Label lblGuide;
-        private System.Windows.Forms.Button btnCancel;
     }
 }

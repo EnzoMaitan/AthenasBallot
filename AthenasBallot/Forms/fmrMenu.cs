@@ -20,23 +20,54 @@ namespace AthenasBallot.Forms
 
         private void btnManageVoters_Click(object sender, EventArgs e)
         {
-            var fmrManageVoter = new fmrManageVoter();
+            ClearPanel();
+            var fmrManageVoter = new fmrManageVoter()
+            {
+                TopLevel = false,
+                AutoScroll = false,
+                FormBorderStyle = FormBorderStyle.None
+            };
+            panelActivities.Controls.Add(fmrManageVoter);
             fmrManageVoter.Show();
-            this.Hide();
         }
 
         private void btnManageCandidate_Click(object sender, EventArgs e)
         {
-            var fmrManageCandidate = new fmrManageCandidate();
+            ClearPanel();
+            var fmrManageCandidate = new fmrManageCandidate()
+            {
+                TopLevel = false,
+                AutoScroll = false,
+                FormBorderStyle = FormBorderStyle.None
+            };
+            panelActivities.Controls.Add(fmrManageCandidate);
             fmrManageCandidate.Show();
-            this.Hide();
         }
 
         private void btnManageProcess_Click(object sender, EventArgs e)
         {
-            var fmrManageProcess = new fmrManageProcess();
+            ClearPanel();
+            var fmrManageProcess = new fmrManageProcess()
+            {
+                TopLevel = false,
+                AutoScroll = false,
+                FormBorderStyle = FormBorderStyle.None
+            };
+            panelActivities.Controls.Add(fmrManageProcess);
             fmrManageProcess.Show();
-            this.Hide();
+        }
+
+        private void btnManageParties_Click(object sender, EventArgs e)
+        {
+            ClearPanel();
+            var fmrManageParty = new fmrManageParty()
+            {
+                TopLevel = false,
+                AutoScroll = false,
+                FormBorderStyle = FormBorderStyle.None
+            };
+            panelActivities.Controls.Add(fmrManageParty);
+            fmrManageParty.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -47,11 +78,19 @@ namespace AthenasBallot.Forms
             this.Dispose();
         }
 
-        private void btnManageParties_Click(object sender, EventArgs e)
+        private void ClearPanel()
         {
-            var fmrManageParty = new fmrManageParty();
-            fmrManageParty.Show();
-            this.Hide();
+            if (panelActivities != null)
+            {
+                while (panelActivities.Controls.Count > 0)
+                {
+                    panelActivities.Controls[0].Dispose();
+                }
+            }
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

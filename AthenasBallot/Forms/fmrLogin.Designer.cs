@@ -93,8 +93,9 @@
             this.lblForgotPassword.Size = new System.Drawing.Size(131, 15);
             this.lblForgotPassword.TabIndex = 5;
             this.lblForgotPassword.Text = "Forgot your password?";
+            this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
             // 
-            // fmrLogin
+            // FmrLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

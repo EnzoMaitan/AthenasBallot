@@ -32,5 +32,10 @@ namespace AthenasBallot.Forms
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

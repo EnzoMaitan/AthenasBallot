@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancel = new System.Windows.Forms.Button();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -39,26 +38,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.btnEndProcess = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnManageParticipants = new System.Windows.Forms.Button();
-            this.cmbProcesses = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbProcesses = new System.Windows.Forms.ComboBox();
+            this.btnManageParticipants = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEndProcess = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(42, 415);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 0;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // dtpStartDate
             // 
@@ -160,41 +149,14 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnStart
+            // label1
             // 
-            this.btnStart.Location = new System.Drawing.Point(53, 135);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            // 
-            // btnEndProcess
-            // 
-            this.btnEndProcess.Location = new System.Drawing.Point(134, 135);
-            this.btnEndProcess.Name = "btnEndProcess";
-            this.btnEndProcess.Size = new System.Drawing.Size(75, 23);
-            this.btnEndProcess.TabIndex = 1;
-            this.btnEndProcess.Text = "End";
-            this.btnEndProcess.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(215, 135);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnManageParticipants
-            // 
-            this.btnManageParticipants.Location = new System.Drawing.Point(458, 216);
-            this.btnManageParticipants.Name = "btnManageParticipants";
-            this.btnManageParticipants.Size = new System.Drawing.Size(89, 34);
-            this.btnManageParticipants.TabIndex = 3;
-            this.btnManageParticipants.Text = "Manage Participants";
-            this.btnManageParticipants.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(115, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Process:";
             // 
             // cmbProcesses
             // 
@@ -205,23 +167,50 @@
             this.cmbProcesses.TabIndex = 4;
             this.cmbProcesses.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbProcesses_MouseClick);
             // 
-            // label1
+            // btnManageParticipants
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Process:";
+            this.btnManageParticipants.Location = new System.Drawing.Point(458, 216);
+            this.btnManageParticipants.Name = "btnManageParticipants";
+            this.btnManageParticipants.Size = new System.Drawing.Size(89, 34);
+            this.btnManageParticipants.TabIndex = 3;
+            this.btnManageParticipants.Text = "Manage Participants";
+            this.btnManageParticipants.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(215, 135);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnEndProcess
+            // 
+            this.btnEndProcess.Location = new System.Drawing.Point(134, 135);
+            this.btnEndProcess.Name = "btnEndProcess";
+            this.btnEndProcess.Size = new System.Drawing.Size(75, 23);
+            this.btnEndProcess.TabIndex = 1;
+            this.btnEndProcess.Text = "End";
+            this.btnEndProcess.UseVisualStyleBackColor = true;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(53, 135);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
             // 
             // fmrManageProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(650, 436);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.btnCancel);
             this.Name = "fmrManageProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmrManageProcess";
@@ -235,8 +224,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.TextBox txtName;

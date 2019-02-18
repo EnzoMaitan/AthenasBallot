@@ -33,13 +33,6 @@ namespace AthenasBallot.Forms
             cmbSex.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            var fmrMenu = new fmrMenu();
-            fmrMenu.Show();
-            this.Dispose();
-        }
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
             try

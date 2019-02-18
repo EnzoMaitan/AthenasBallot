@@ -12,13 +12,6 @@ namespace AthenasBallot.Forms
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            var fmrMenu = new fmrMenu();
-            fmrMenu.Show();
-            this.Dispose();
-        }
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
             try
@@ -36,6 +29,11 @@ namespace AthenasBallot.Forms
         {
             var voterDAO = new VoterDAO();
             voterDAO.Add(new Voter(txtName.Text, txtStudentNumber.Text, txtClass.Text));
+        }
+
+        private void btnImportCSV_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,13 +12,6 @@ namespace AthenasBallot.Forms
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            var fmrMenu = new fmrMenu();
-            fmrMenu.Show();
-            this.Dispose();
-        }
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
             try

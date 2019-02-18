@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.tabControlCreate = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -50,18 +49,9 @@
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(38, 415);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 0;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
             // btnCreate
             // 
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Location = new System.Drawing.Point(315, 222);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
@@ -74,10 +64,10 @@
             // 
             this.tabControlCreate.Controls.Add(this.tabPage1);
             this.tabControlCreate.Controls.Add(this.tabPage2);
-            this.tabControlCreate.Location = new System.Drawing.Point(38, 25);
+            this.tabControlCreate.Location = new System.Drawing.Point(12, 22);
             this.tabControlCreate.Name = "tabControlCreate";
             this.tabControlCreate.SelectedIndex = 0;
-            this.tabControlCreate.Size = new System.Drawing.Size(676, 356);
+            this.tabControlCreate.Size = new System.Drawing.Size(626, 356);
             this.tabControlCreate.TabIndex = 2;
             // 
             // tabPage1
@@ -93,7 +83,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(668, 330);
+            this.tabPage1.Size = new System.Drawing.Size(618, 330);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -108,6 +98,7 @@
             // 
             // btnImportLogo
             // 
+            this.btnImportLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportLogo.Location = new System.Drawing.Point(95, 251);
             this.btnImportLogo.Name = "btnImportLogo";
             this.btnImportLogo.Size = new System.Drawing.Size(75, 23);
@@ -165,7 +156,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(668, 330);
+            this.tabPage2.Size = new System.Drawing.Size(618, 330);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manage Members";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -211,9 +202,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(650, 436);
             this.Controls.Add(this.tabControlCreate);
-            this.Controls.Add(this.btnCancel);
             this.Name = "fmrManageParty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmrManageParty";
@@ -228,8 +219,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.TabControl tabControlCreate;
         private System.Windows.Forms.TabPage tabPage1;
