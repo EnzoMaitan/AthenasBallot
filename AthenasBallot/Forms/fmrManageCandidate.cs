@@ -61,5 +61,10 @@ namespace AthenasBallot.Forms
             var partyDAO = new PartyDAO();
             return partyDAO.Parties().FirstOrDefault(x => x.Name == Convert.ToString(cmbParty.SelectedItem));
         }
+
+        private void fmrManageCandidate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

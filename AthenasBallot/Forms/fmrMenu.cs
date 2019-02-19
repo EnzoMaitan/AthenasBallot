@@ -8,7 +8,7 @@ namespace AthenasBallot.Forms
         public fmrMenu()
         {
             InitializeComponent();
-
+            labelLoggedIn.Text += " " +FmrLogin.LoggedOperator.Name;
             if (FmrLogin.LoggedOperator.Role == Classes.Entities.Role.ElectionJudge)
             {
                 btnManageCandidate.Enabled = false;

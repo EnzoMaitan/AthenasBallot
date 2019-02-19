@@ -83,9 +83,11 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(401, 354);
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.btnRegister.Location = new System.Drawing.Point(356, 296);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.Size = new System.Drawing.Size(75, 32);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -93,6 +95,8 @@
             // 
             // btnLoadImage
             // 
+            this.btnLoadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadImage.Font = new System.Drawing.Font("Century Gothic", 8.25F);
             this.btnLoadImage.Location = new System.Drawing.Point(51, 305);
             this.btnLoadImage.Name = "btnLoadImage";
             this.btnLoadImage.Size = new System.Drawing.Size(75, 23);
@@ -175,6 +179,7 @@
             this.Name = "fmrManageCandidate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmrManageCandidate";
+            this.Load += new System.EventHandler(this.fmrManageCandidate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
