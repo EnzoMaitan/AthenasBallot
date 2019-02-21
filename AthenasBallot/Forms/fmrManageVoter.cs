@@ -12,8 +12,8 @@ namespace AthenasBallot.Forms
 
         public fmrManageVoter()
         {
-            lblError.Visible = false;
             InitializeComponent();
+            lblError.Visible = false;
         }
 
 
@@ -49,10 +49,20 @@ namespace AthenasBallot.Forms
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            var voterDAO = new VoterDAO();
-            foreach (var voter in _voters)
+            try
             {
-                voterDAO.Add(voter);
+                var voterDAO = new VoterDAO();
+                foreach (var voter in _voters)
+                {
+                    voterDAO.Add(voter);
+                }
+                MessageBox.Show("Voters Registered!");
+                lstVoters.Items.Clear();
+            }
+            catch (Exception ex)
+            {
+                lblError.Visible = true;
+                lblError.Text = ex.Message;
             }
         }
 
