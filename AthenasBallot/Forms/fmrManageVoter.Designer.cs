@@ -42,6 +42,7 @@
             this.txtStudentNumber = new System.Windows.Forms.TextBox();
             this.txtClass = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.ofdReadCsv = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -94,10 +95,12 @@
             // 
             // lstVoters
             // 
+            this.lstVoters.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lstVoters.FormattingEnabled = true;
+            this.lstVoters.ItemHeight = 17;
             this.lstVoters.Location = new System.Drawing.Point(322, 56);
             this.lstVoters.Name = "lstVoters";
-            this.lstVoters.Size = new System.Drawing.Size(304, 212);
+            this.lstVoters.Size = new System.Drawing.Size(304, 208);
             this.lstVoters.TabIndex = 29;
             // 
             // btnImportCSV
@@ -110,6 +113,7 @@
             this.btnImportCSV.TabIndex = 28;
             this.btnImportCSV.Text = "Import File";
             this.btnImportCSV.UseVisualStyleBackColor = false;
+            this.btnImportCSV.Click += new System.EventHandler(this.btnImportCSV_Click);
             // 
             // lblRegister
             // 
@@ -189,6 +193,10 @@
             this.txtName.Size = new System.Drawing.Size(198, 32);
             this.txtName.TabIndex = 20;
             // 
+            // ofdReadCsv
+            // 
+            this.ofdReadCsv.FileName = "openFileDialog1";
+            // 
             // fmrManageVoter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,5 +240,6 @@
         private System.Windows.Forms.TextBox txtStudentNumber;
         private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.OpenFileDialog ofdReadCsv;
     }
 }
