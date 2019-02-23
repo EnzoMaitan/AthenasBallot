@@ -41,51 +41,58 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.ofdPhoto = new System.Windows.Forms.OpenFileDialog();
+            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(215, 96);
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.txtName.Location = new System.Drawing.Point(239, 95);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(216, 20);
+            this.txtName.Size = new System.Drawing.Size(216, 24);
             this.txtName.TabIndex = 0;
             // 
             // txtStudentNumber
             // 
-            this.txtStudentNumber.Location = new System.Drawing.Point(215, 135);
+            this.txtStudentNumber.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.txtStudentNumber.Location = new System.Drawing.Point(239, 144);
             this.txtStudentNumber.Name = "txtStudentNumber";
-            this.txtStudentNumber.Size = new System.Drawing.Size(216, 20);
+            this.txtStudentNumber.Size = new System.Drawing.Size(216, 24);
             this.txtStudentNumber.TabIndex = 1;
             // 
             // txtStudentClass
             // 
-            this.txtStudentClass.Location = new System.Drawing.Point(215, 175);
+            this.txtStudentClass.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.txtStudentClass.Location = new System.Drawing.Point(239, 193);
             this.txtStudentClass.Name = "txtStudentClass";
-            this.txtStudentClass.Size = new System.Drawing.Size(216, 20);
+            this.txtStudentClass.Size = new System.Drawing.Size(216, 24);
             this.txtStudentClass.TabIndex = 2;
             // 
             // cmbSex
             // 
+            this.cmbSex.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cmbSex.FormattingEnabled = true;
-            this.cmbSex.Location = new System.Drawing.Point(215, 214);
+            this.cmbSex.Location = new System.Drawing.Point(239, 242);
             this.cmbSex.Name = "cmbSex";
-            this.cmbSex.Size = new System.Drawing.Size(41, 21);
+            this.cmbSex.Size = new System.Drawing.Size(41, 25);
             this.cmbSex.TabIndex = 3;
             // 
             // cmbParty
             // 
+            this.cmbParty.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cmbParty.FormattingEnabled = true;
-            this.cmbParty.Location = new System.Drawing.Point(215, 254);
+            this.cmbParty.Location = new System.Drawing.Point(240, 292);
             this.cmbParty.Name = "cmbParty";
-            this.cmbParty.Size = new System.Drawing.Size(126, 21);
+            this.cmbParty.Size = new System.Drawing.Size(126, 25);
             this.cmbParty.TabIndex = 4;
             // 
             // btnRegister
             // 
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            this.btnRegister.Location = new System.Drawing.Point(356, 296);
+            this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.btnRegister.Location = new System.Drawing.Point(497, 381);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 32);
             this.btnRegister.TabIndex = 5;
@@ -96,66 +103,88 @@
             // btnLoadImage
             // 
             this.btnLoadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadImage.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.btnLoadImage.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnLoadImage.Location = new System.Drawing.Point(51, 305);
             this.btnLoadImage.Name = "btnLoadImage";
-            this.btnLoadImage.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadImage.Size = new System.Drawing.Size(78, 32);
             this.btnLoadImage.TabIndex = 6;
             this.btnLoadImage.Text = "Load Image";
             this.btnLoadImage.UseVisualStyleBackColor = true;
+            this.btnLoadImage.Click += new System.EventHandler(this.btnLoadImage_Click);
             // 
             // pictureBox
             // 
             this.pictureBox.Location = new System.Drawing.Point(22, 83);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(182, 203);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 8;
             this.pictureBox.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(212, 80);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label1.Location = new System.Drawing.Point(235, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(51, 19);
             this.label1.TabIndex = 11;
             this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 119);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label2.Location = new System.Drawing.Point(235, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.Size = new System.Drawing.Size(122, 19);
             this.label2.TabIndex = 12;
             this.label2.Text = "Student Number";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(212, 159);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label3.Location = new System.Drawing.Point(235, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.Size = new System.Drawing.Size(101, 19);
             this.label3.TabIndex = 13;
             this.label3.Text = "Student Class";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(212, 198);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label4.Location = new System.Drawing.Point(235, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.Size = new System.Drawing.Size(32, 19);
             this.label4.TabIndex = 14;
             this.label4.Text = "Sex";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(216, 238);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label5.Location = new System.Drawing.Point(236, 270);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.Size = new System.Drawing.Size(44, 19);
             this.label5.TabIndex = 15;
             this.label5.Text = "Party";
+            // 
+            // ofdPhoto
+            // 
+            this.ofdPhoto.FileName = "openFileDialog1";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblError.ForeColor = System.Drawing.Color.Coral;
+            this.lblError.Location = new System.Drawing.Point(242, 356);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(38, 19);
+            this.lblError.TabIndex = 16;
+            this.lblError.Text = "Error";
             // 
             // fmrManageCandidate
             // 
@@ -163,6 +192,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(650, 436);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -179,7 +209,6 @@
             this.Name = "fmrManageCandidate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmrManageCandidate";
-            this.Load += new System.EventHandler(this.fmrManageCandidate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,5 +230,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.OpenFileDialog ofdPhoto;
+        private System.Windows.Forms.Label lblError;
     }
 }

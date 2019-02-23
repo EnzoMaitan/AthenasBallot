@@ -106,7 +106,7 @@ namespace AthenasBallot.Forms
 
         private void ConfigureOpenFileDialog()
         {
-            ofdReadCsv.Filter = "Anexos(*.csv;)|*.csv";
+            ofdReadCsv.Filter = "CSV(*.csv;)|*.csv";
             ofdReadCsv.Multiselect = true;
             ofdReadCsv.RestoreDirectory = true;
         }

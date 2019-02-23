@@ -105,6 +105,7 @@
             this.btnImportLogo.TabIndex = 7;
             this.btnImportLogo.Text = "Import";
             this.btnImportLogo.UseVisualStyleBackColor = true;
+            this.btnImportLogo.Click += new System.EventHandler(this.btnImportLogo_Click);
             // 
             // lblLogo
             // 

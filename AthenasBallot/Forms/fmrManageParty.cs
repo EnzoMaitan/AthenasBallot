@@ -107,5 +107,10 @@ namespace AthenasBallot.Forms
                 listBox1.Items.Add(candidate.Name);
             }
         }
+
+        private void btnImportLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace AthenasBallot.Classes.Entities
         {
             var processDAO = new ProcessDAO();
             var process = processDAO.Processes().FirstOrDefault(x => x.Name == name);
-            if (process != null)
+            if (process == null)
             {
                 return true;
             }

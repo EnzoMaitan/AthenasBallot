@@ -42,5 +42,25 @@ namespace AthenasBallot.Forms
                 cmbProcesses.Items.Add(process.Name);
             }
         }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEndProcess_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnManageParticipants_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

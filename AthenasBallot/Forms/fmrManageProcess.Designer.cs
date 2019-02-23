@@ -175,6 +175,7 @@
             this.btnManageParticipants.TabIndex = 3;
             this.btnManageParticipants.Text = "Manage Participants";
             this.btnManageParticipants.UseVisualStyleBackColor = true;
+            this.btnManageParticipants.Click += new System.EventHandler(this.btnManageParticipants_Click);
             // 
             // btnDelete
             // 
@@ -184,6 +185,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEndProcess
             // 
@@ -193,6 +195,7 @@
             this.btnEndProcess.TabIndex = 1;
             this.btnEndProcess.Text = "End";
             this.btnEndProcess.UseVisualStyleBackColor = true;
+            this.btnEndProcess.Click += new System.EventHandler(this.btnEndProcess_Click);
             // 
             // btnStart
             // 
@@ -202,6 +205,7 @@
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // fmrManageProcess
             // 

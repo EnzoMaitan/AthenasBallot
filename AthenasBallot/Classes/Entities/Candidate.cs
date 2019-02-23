@@ -36,7 +36,7 @@ namespace AthenasBallot.Classes.Entities
         {
             var candidateDAO = new CandidateDAO();
             var candidate = candidateDAO.Candidates().FirstOrDefault(x => x.Name == name);
-            if (candidate != null)
+            if (candidate == null)
             {
                 return true;
             }
