@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using AthenasBallot.Classes;
 using AthenasBallot.DAO;
 
 namespace AthenasBallot.Forms
@@ -26,9 +27,10 @@ namespace AthenasBallot.Forms
                 party = GetParty();
 
                 var sex = Convert.ToChar(cmbSex.SelectedItem);
+                PictureBoxImageLoader p = new PictureBoxImageLoader();
 
                 var candidate = new Candidate(txtName.Text, txtStudentNumber.Text
-                    , txtStudentClass.Text, sex, ConvertPictureBoxImageToByteArray(), party.Id);
+                    , txtStudentClass.Text, sex, p.ConvertPictureBoxImageToByteArray(pictureBox), party.Id);
 
                 var candidateDAO = new CandidateDAO();
                 candidateDAO.Add(candidate);
@@ -42,26 +44,19 @@ namespace AthenasBallot.Forms
             }
         }
 
-        private byte[] ConvertPictureBoxImageToByteArray()
-        {
-            MemoryStream ms = new MemoryStream();
-
-            pictureBox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-
-            return ms.GetBuffer();
-        }
-
+       
         private void btnLoadImage_Click(object sender, EventArgs e)
         {
             try
             {
+                PictureBoxImageLoader p = new PictureBoxImageLoader();
                 ofdPhoto.Reset();
-                ConfigureOpenFileDialog();
+                p.ConfigureOpenFileDialog(ofdPhoto);
                 if (ofdPhoto.ShowDialog() == DialogResult.OK)
                 {
                     ofdPhoto.OpenFile();
-                    LoadImageIntoPictureBox();
-                }          
+                    p.LoadImageIntoPictureBox(pictureBox, ofdPhoto);
+                }
             }
             catch (Exception ex)
             {
@@ -70,15 +65,6 @@ namespace AthenasBallot.Forms
             }
         }
 
-        private void LoadImageIntoPictureBox()
-        {
-            pictureBox.Image = Image.FromFile(ofdPhoto.FileName);
-        }
-        private void ConfigureOpenFileDialog()
-        {
-            ofdPhoto.Filter = "Image(*.JPG;*PNG;*.IMG,*.JPEG)|*.JPG;*PNG;*.IMG,*.JPEG";
-            ofdPhoto.RestoreDirectory = true;
-        }
         private void ConfigureCmbParties()
         {
             cmbParty.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -101,6 +87,5 @@ namespace AthenasBallot.Forms
             var partyDAO = new PartyDAO();
             return partyDAO.Parties().FirstOrDefault(x => x.Name == Convert.ToString(cmbParty.SelectedItem));
         }
-
     }
 }

@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
-            this.lstVoters = new System.Windows.Forms.ListBox();
             this.btnImportCSV = new System.Windows.Forms.Button();
             this.lblRegister = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -43,6 +42,9 @@
             this.txtClass = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.ofdReadCsv = new System.Windows.Forms.OpenFileDialog();
+            this.dtgVoters = new System.Windows.Forms.DataGridView();
+            this.btnRemoveAll = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVoters)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -64,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.label1.Location = new System.Drawing.Point(318, 34);
+            this.label1.Location = new System.Drawing.Point(297, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 22);
             this.label1.TabIndex = 32;
@@ -75,7 +77,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(606, 271);
+            this.button1.Location = new System.Drawing.Point(627, 271);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 20);
             this.button1.TabIndex = 31;
@@ -93,21 +95,11 @@
             this.lblError.TabIndex = 30;
             this.lblError.Text = "Error";
             // 
-            // lstVoters
-            // 
-            this.lstVoters.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lstVoters.FormattingEnabled = true;
-            this.lstVoters.ItemHeight = 17;
-            this.lstVoters.Location = new System.Drawing.Point(322, 56);
-            this.lstVoters.Name = "lstVoters";
-            this.lstVoters.Size = new System.Drawing.Size(304, 208);
-            this.lstVoters.TabIndex = 29;
-            // 
             // btnImportCSV
             // 
             this.btnImportCSV.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnImportCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportCSV.Location = new System.Drawing.Point(532, 271);
+            this.btnImportCSV.Location = new System.Drawing.Point(553, 271);
             this.btnImportCSV.Name = "btnImportCSV";
             this.btnImportCSV.Size = new System.Drawing.Size(68, 28);
             this.btnImportCSV.TabIndex = 28;
@@ -197,17 +189,39 @@
             // 
             this.ofdReadCsv.FileName = "openFileDialog1";
             // 
+            // dtgVoters
+            // 
+            this.dtgVoters.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtgVoters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgVoters.Location = new System.Drawing.Point(301, 56);
+            this.dtgVoters.Name = "dtgVoters";
+            this.dtgVoters.Size = new System.Drawing.Size(346, 209);
+            this.dtgVoters.TabIndex = 34;
+            // 
+            // btnRemoveAll
+            // 
+            this.btnRemoveAll.BackColor = System.Drawing.Color.Coral;
+            this.btnRemoveAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveAll.Location = new System.Drawing.Point(324, 271);
+            this.btnRemoveAll.Name = "btnRemoveAll";
+            this.btnRemoveAll.Size = new System.Drawing.Size(72, 28);
+            this.btnRemoveAll.TabIndex = 35;
+            this.btnRemoveAll.Text = "Remove All";
+            this.btnRemoveAll.UseVisualStyleBackColor = false;
+            this.btnRemoveAll.Click += new System.EventHandler(this.btnRemoveAll_Click);
+            // 
             // fmrManageVoter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(650, 436);
+            this.Controls.Add(this.btnRemoveAll);
+            this.Controls.Add(this.dtgVoters);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.lstVoters);
             this.Controls.Add(this.btnImportCSV);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.btnAdd);
@@ -219,6 +233,7 @@
             this.Controls.Add(this.txtName);
             this.Name = "fmrManageVoter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVoters)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,7 +245,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.ListBox lstVoters;
         private System.Windows.Forms.Button btnImportCSV;
         private System.Windows.Forms.Label lblRegister;
         private System.Windows.Forms.Button btnAdd;
@@ -241,5 +255,7 @@
         private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.OpenFileDialog ofdReadCsv;
+        private System.Windows.Forms.DataGridView dtgVoters;
+        private System.Windows.Forms.Button btnRemoveAll;
     }
 }

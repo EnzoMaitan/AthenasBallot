@@ -1,8 +1,11 @@
 ﻿using AthenasBallot.Classes.Entities;
 using AthenasBallot.DAO;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.IO;
+using AthenasBallot.Classes;
 
 namespace AthenasBallot.Forms
 {
@@ -31,8 +34,9 @@ namespace AthenasBallot.Forms
             try
             {
                 var number = Convert.ToInt32(txtNumber.Text);
+                PictureBoxImageLoader p = new PictureBoxImageLoader();
 
-                var party = new Party(txtName.Text, number,GetImage());
+                var party = new Party(txtName.Text, number,p.ConvertPictureBoxImageToByteArray(pictureBox));
 
                 var partyDAO = new PartyDAO();
                 partyDAO.Add(party);
@@ -41,16 +45,11 @@ namespace AthenasBallot.Forms
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private byte[] GetImage()
-        {
-            return null;
-        }
+        }     
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show($"Do you really want to remove {listBox1.SelectedItem} from {cmbParties.SelectedItem} ",
+            if (MessageBox.Show($"Do you really want to remove {listBox.SelectedItem} from {cmbParties.SelectedItem} ",
                     "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
@@ -68,7 +67,7 @@ namespace AthenasBallot.Forms
         private void DissasociatePartyFromCandidate()
         {
             var candidateDAO = new CandidateDAO();
-            var candidate = candidateDAO.Candidates().FirstOrDefault(x => x.Name == listBox1.SelectedItem.ToString());
+            var candidate = candidateDAO.Candidates().FirstOrDefault(x => x.Name == listBox.SelectedItem.ToString());
             candidate.DisassociateParty();
             candidateDAO.Update(candidate);
         }
@@ -92,6 +91,7 @@ namespace AthenasBallot.Forms
 
         private void cmbParties_SelectedIndexChanged(object sender, EventArgs e)
         {
+            listBox.Items.Clear();
             LoadCandidatesIntoListbox();
         }
 
@@ -104,13 +104,41 @@ namespace AthenasBallot.Forms
             var candidates = candidateDAO.Candidates().Where(x => x.PartyID == party.Id);
             foreach (var candidate in candidates)
             {
-                listBox1.Items.Add(candidate.Name);
+                listBox.Items.Add(candidate.Name);
             }
         }
 
         private void btnImportLogo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                PictureBoxImageLoader p = new PictureBoxImageLoader();
+                ofdPhoto.Reset();
+                p.ConfigureOpenFileDialog(ofdPhoto);
+                if (ofdPhoto.ShowDialog() == DialogResult.OK)
+                {
+                    ofdPhoto.OpenFile();
+                    p.LoadImageIntoPictureBox(pictureBox,ofdPhoto);
+                }
+            }
+            catch (Exception ex)
+            {
+                lblError.Visible = true;
+                lblError.Text = ex.Message;
+            }
+        }
 
+        private void txtNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            FilterInputToOnlyAllowNumbers(e);
+        }
+       
+        private static void FilterInputToOnlyAllowNumbers(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

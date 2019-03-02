@@ -36,7 +36,7 @@ namespace AthenasBallot.Classes.Entities
         {
             var partyDAO = new PartyDAO();
             var party = partyDAO.Parties().FirstOrDefault(x => x.Name == name);
-            if (party != null)
+            if (party == null)
             {
                 return true;
             }
