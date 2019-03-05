@@ -16,6 +16,8 @@ namespace AthenasBallot.Forms
             InitializeComponent();
 
             ConfigureCmbParties();
+            lblError.Visible = false;
+            ConfigureTextboxPlaceholders();
         }
 
         private void ConfigureCmbParties()
@@ -28,7 +30,13 @@ namespace AthenasBallot.Forms
                 cmbParties.Items.Add(party.Name);
             }
         }
-
+        private void ConfigureTextboxPlaceholders()
+        {
+            var t1 = new TextboxPlaceHolderConfigurator(txtNumber, "###");
+            t1.ConfigureTextBox();
+            var t2 = new TextboxPlaceHolderConfigurator(txtName, "Party Name");
+            t2.ConfigureTextBox();
+        }
         private void btnCreate_Click(object sender, EventArgs e)
         {
             try
@@ -43,7 +51,8 @@ namespace AthenasBallot.Forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                lblError.Visible = true;
+                lblError.Text = ex.Message;
             }
         }     
 

@@ -186,6 +186,7 @@
     <Compile Include="Forms\fmrMenu.Designer.cs">
       <DependentUpon>fmrMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TextboxPlaceHolderConfigurator.cs" />
     <Compile Include="IDAO\IBallotDAO.cs" />
     <Compile Include="IDAO\IBallotRegistryDAO.cs" />
     <Compile Include="IDAO\ICandidateDAO.cs" />

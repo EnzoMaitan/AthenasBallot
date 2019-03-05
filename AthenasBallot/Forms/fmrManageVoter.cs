@@ -18,6 +18,7 @@ namespace AthenasBallot.Forms
             InitializeComponent();
             DataGridFormater dgf = new DataGridFormater(dtgVoters, this);
             dgf.FormatDatagrid();
+            ConfigureTextboxPlaceholders();
             lblError.Visible = false;
         }
 
@@ -144,8 +145,17 @@ namespace AthenasBallot.Forms
             _voters.Clear();
             dtgVoters.Rows.Clear();
         }
-    }
 
+        private void ConfigureTextboxPlaceholders()
+        {
+            var t1 = new TextboxPlaceHolderConfigurator(txtClass, "Student Class");
+            t1.ConfigureTextBox();
+            var t2 = new TextboxPlaceHolderConfigurator(txtName, "Student name");
+            t2.ConfigureTextBox();
+            var t3 = new TextboxPlaceHolderConfigurator(txtStudentNumber, "Student Number");
+            t3.ConfigureTextBox();
+        }
+    }
     class DataGridFormater
     {
         private readonly DataGridView _dtg;

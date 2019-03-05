@@ -9,7 +9,8 @@ namespace AthenasBallot.Forms
         public static SystemOperator LoggedOperator;
         public FmrLogin()
         {
-            InitializeComponent();          
+            InitializeComponent();
+            ConfigureTextboxPlaceholders();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -32,7 +33,13 @@ namespace AthenasBallot.Forms
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private void ConfigureTextboxPlaceholders()
+        {
+            var t1 = new TextboxPlaceHolderConfigurator(txtLogin, "User login");
+            t1.ConfigureTextBox();
+            var t2 = new TextboxPlaceHolderConfigurator(txtPassword, "User password");
+            t2.ConfigureTextBox();
+        }
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
 

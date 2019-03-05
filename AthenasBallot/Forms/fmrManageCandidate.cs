@@ -17,6 +17,7 @@ namespace AthenasBallot.Forms
             lblError.Visible = false;      
             ConfigureCmbSex();
             ConfigureCmbParties();
+            ConfigureTextboxPlaceholders();
         }
     
         private void btnRegister_Click(object sender, EventArgs e)
@@ -86,6 +87,15 @@ namespace AthenasBallot.Forms
         {
             var partyDAO = new PartyDAO();
             return partyDAO.Parties().FirstOrDefault(x => x.Name == Convert.ToString(cmbParty.SelectedItem));
+        }
+        private void ConfigureTextboxPlaceholders()
+        {
+            var t1 = new TextboxPlaceHolderConfigurator(txtStudentClass, "Candidate's Class");
+            t1.ConfigureTextBox();
+            var t2 = new TextboxPlaceHolderConfigurator(txtName, "Candidate's name");
+            t2.ConfigureTextBox();
+            var t3 = new TextboxPlaceHolderConfigurator(txtStudentNumber, "Student Number");
+            t3.ConfigureTextBox();
         }
     }
 }

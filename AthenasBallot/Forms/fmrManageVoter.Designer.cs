@@ -180,6 +180,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.txtName.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtName.Location = new System.Drawing.Point(32, 100);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(198, 32);

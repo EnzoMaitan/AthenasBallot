@@ -147,9 +147,9 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label3.Location = new System.Drawing.Point(235, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 19);
+            this.label3.Size = new System.Drawing.Size(132, 19);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Student Class";
+            this.label3.Text = "Candidate\'s Class";
             // 
             // label4
             // 
