@@ -54,7 +54,7 @@
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
-            this.btnRegister.Location = new System.Drawing.Point(535, 391);
+            this.btnRegister.Location = new System.Drawing.Point(553, 430);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(103, 33);
             this.btnRegister.TabIndex = 33;
@@ -89,7 +89,7 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblError.ForeColor = System.Drawing.Color.Coral;
-            this.lblError.Location = new System.Drawing.Point(297, 361);
+            this.lblError.Location = new System.Drawing.Point(320, 388);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(38, 19);
             this.lblError.TabIndex = 30;
@@ -216,7 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(650, 436);
+            this.ClientSize = new System.Drawing.Size(666, 475);
             this.Controls.Add(this.btnRemoveAll);
             this.Controls.Add(this.dtgVoters);
             this.Controls.Add(this.btnRegister);
@@ -232,6 +232,7 @@
             this.Controls.Add(this.txtStudentNumber);
             this.Controls.Add(this.txtClass);
             this.Controls.Add(this.txtName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fmrManageVoter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.dtgVoters)).EndInit();

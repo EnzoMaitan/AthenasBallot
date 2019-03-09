@@ -53,25 +53,27 @@
             // 
             // btnCreate
             // 
+            this.btnCreate.BackColor = System.Drawing.Color.LightGreen;
+            this.btnCreate.FlatAppearance.BorderSize = 0;
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.btnCreate.Location = new System.Drawing.Point(536, 350);
+            this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.btnCreate.Location = new System.Drawing.Point(549, 391);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(86, 34);
+            this.btnCreate.Size = new System.Drawing.Size(103, 33);
             this.btnCreate.TabIndex = 1;
             this.btnCreate.Text = "Create ";
-            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // tabControlCreate
             // 
             this.tabControlCreate.Controls.Add(this.tabPage1);
             this.tabControlCreate.Controls.Add(this.tabPage2);
-            this.tabControlCreate.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.tabControlCreate.Location = new System.Drawing.Point(12, 12);
+            this.tabControlCreate.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.tabControlCreate.Location = new System.Drawing.Point(0, 0);
             this.tabControlCreate.Name = "tabControlCreate";
             this.tabControlCreate.SelectedIndex = 0;
-            this.tabControlCreate.Size = new System.Drawing.Size(637, 425);
+            this.tabControlCreate.Size = new System.Drawing.Size(666, 475);
             this.tabControlCreate.TabIndex = 2;
             // 
             // tabPage1
@@ -85,10 +87,10 @@
             this.tabPage1.Controls.Add(this.txtNumber);
             this.tabPage1.Controls.Add(this.txtName);
             this.tabPage1.Controls.Add(this.btnCreate);
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(629, 390);
+            this.tabPage1.Size = new System.Drawing.Size(658, 432);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Create";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -180,7 +182,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 31);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(629, 390);
+            this.tabPage2.Size = new System.Drawing.Size(658, 440);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Manage Members";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -237,8 +239,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(650, 436);
+            this.ClientSize = new System.Drawing.Size(666, 475);
             this.Controls.Add(this.tabControlCreate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fmrManageParty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmrManageParty";

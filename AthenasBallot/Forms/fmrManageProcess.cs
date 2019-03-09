@@ -10,6 +10,8 @@ namespace AthenasBallot.Forms
         public fmrManageProcess()
         {
             InitializeComponent();
+            ConfigureDateTimePickerDisplayMode(dtpEndDate);
+            ConfigureDateTimePickerDisplayMode(dtpStartDate);
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -43,6 +45,11 @@ namespace AthenasBallot.Forms
             }
         }
 
+        private void ConfigureDateTimePickerDisplayMode(DateTimePicker dtp)
+        {
+            dtp.CustomFormat = "HH:mm - dd/MM";
+        }
+
         private void btnStart_Click(object sender, EventArgs e)
         {
 
@@ -59,6 +66,11 @@ namespace AthenasBallot.Forms
         }
 
         private void btnManageParticipants_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDateFormat_Click(object sender, EventArgs e)
         {
 
         }
